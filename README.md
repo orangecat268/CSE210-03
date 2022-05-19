@@ -2,10 +2,6 @@
 
 jumper Game
 
-Test change
-
-Peter test
-
 Class
 
 # Jumper
