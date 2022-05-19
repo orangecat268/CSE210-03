@@ -48,4 +48,8 @@ root                    (project root folder)
 
 ## Authors
 
+- Alex M awsmudaliar@byui.edu
+- Peter Babcock peterb@saefl.com
+- Rachel Knight kni21003@byui.edu
+
 ---
