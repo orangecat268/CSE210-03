@@ -1,61 +1,41 @@
-class Director:
-    """A person who directs the game. 
-    
-    The responsibility of a Director is to control the sequence of play.
 
-    Attributes:
-        hider (Hider): The game's hider.
-        is_playing (boolean): Whether or not to keep playing.
-        seeker (Seeker): The game's seeker.
-        terminal_service: For getting and displaying information on the terminal.
-    """
+import os
+from game.display_jumper_image import display_jumper_image
+from game.get_random_word import get_random_word
+from game.play_Jumper_game import play_Jumper_Game
+from game.read_Jumper_words import read_Jumper_words
+
+
+class Director:
 
     def __init__(self):
-        """Constructs a new Director.
-        
-        Args:
-            self (Director): an instance of Director.
-        """
-        self._hider = Hider()
-        self._is_playing = True
-        self._seeker = Seeker()
-        self._terminal_service = TerminalService()
-        
+        game_play = ""
+        Jumper_word_list = []
+        dictionary_word_list = []
+        Players_Name = ""
+        random_word_nc = ""
+        random_word = ""
+        jumper_word = ""
+        fastest_time = 0
+        name_top_score = "peter"
+
     def start_game(self):
-        """Starts the game by running the main game loop.
-        
-        Args:
-            self (Director): an instance of Director.
-        """
-        while self._is_playing:
-            self._get_inputs()
-            self._do_updates()
-            self._do_outputs()
 
-    def _get_inputs(self):
-        """Moves the seeker to a new location.
+        #Players_Name = input("Please enter your Name : ")
+        display_jumper_image.player_guess(1)
+        #print(f"Welcome to JUMPER, {Players_Name} ")
+        dictionary_word_list = read_Jumper_words.read_Jumper_words(
+            "week3\Jumper\CSE210-03\jumper.csv", 0)
+        # print(dictionary_word_list)
+        self.random_word_nc = get_random_word.get_random_word(
+            dictionary_word_list)
+        # print(random_word_nc)
+        self.random_word = self.random_word_nc.upper()
+        self.jumper_word = ["#" for i in range(len(self.random_word))]
+        # print(jumper_word)
+        #new_record_guesses = play_Jumper_Game.play_Jumper_Game(self.random_word, self.fastest_time, self.name_top_score, "", self.jumper_word, 0, 5, "", "")
+        new_record_guesses = play_Jumper_Game.play_Jumper_Game(
+            self.random_word, 0, 0, "", self.jumper_word, 0, 5, "", "")
 
-        Args:
-            self (Director): An instance of Director.
-        """
-        new_location = self._terminal_service.read_number("\nEnter a location [1-1000]: ")
-        self._seeker.move_location(new_location)
-        
-    def _do_updates(self):
-        """Keeps watch on where the seeker is moving.
-
-        Args:
-            self (Director): An instance of Director.
-        """
-        self._hider.watch_seeker(self._seeker)
-        
-    def _do_outputs(self):
-        """Provides a hint for the seeker to use.
-
-        Args:
-            self (Director): An instance of Director.
-        """
-        hint = self._hider.get_hint()
-        self._terminal_service.write_text(hint)
-        if self._hider.is_found():
-            self._is_playing = False
+    def clear_screen():
+        os.system('cls' if os.name == 'nt' else 'clear')
