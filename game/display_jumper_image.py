@@ -89,7 +89,7 @@ class display_jumper_image:
             print(f"YOU WIN - the word was: {random_word} \n")
             print(f"Incorrect guesses: {incorrect_guesses} \n")
         else:
-            print(f"\n Your hidden word looks like this: {hidden_word}")
+            print(f"\nYour hidden word looks like this: {hidden_word}")
             if len(incorrect_guesses) > 0:
                 print(
                     f"Incorrect guesses: '{incorrect_guesses}'")
