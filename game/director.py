@@ -11,7 +11,6 @@ class Director:
         game_play = ""
         Jumper_word_list = []
         dictionary_word_list = []
-        random_word_nc = ""
         random_word = ""
         jumper_word = ""
 
