@@ -61,14 +61,6 @@ class display_jumper_image:
             print("")
 
     def play_screen_update(random_word, incorrect_guesses, hidden_word, eval_guess=0, LIMIT=5, game_status="2", last_tried=""):
-
-        print()
-        print("   __  _  _  _  _  ____  ____  ____ ")
-        print(" _(  ) / )((/ )(  _ \(  __)(  _ \\")
-        print("/ \) \) \/ (/ \/ \ ) __/ ) _)  )   /")
-        print("\____/\____/\_)(_/(__)  (____)(__\_)")
-        print()
-
         display_jumper_image.player_guess(len(incorrect_guesses))
 
         if game_status == 0:
