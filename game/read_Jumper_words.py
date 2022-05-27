@@ -7,7 +7,6 @@ class read_Jumper_words:
             with open(filename, "rt") as csv_file:
                 reader = csv.reader(csv_file)
                 next(reader)
-
                 for row_list in reader:
                     key = row_list[key_index_num]
                     dictionary[key] = row_list
