@@ -1,6 +1,7 @@
 
 from game.display_jumper_image import display_jumper_image
 
+
 class play_Jumper_Game:
     def __init__(self):
         incorrect_guesses = []
@@ -10,7 +11,7 @@ class play_Jumper_Game:
         incorrect_guesses = []
         check_guess = True
         while check_guess:
-            print(random_word)
+            # print(random_word)
             if len(incorrect_guesses) == num_chances:
                 display_jumper_image.play_screen_update(
                     random_word, incorrect_guesses, jumper_word, game_status=0)
