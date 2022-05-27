@@ -1,6 +1,4 @@
-
 from game.display_jumper_image import display_jumper_image
-
 
 class play_Jumper_Game:
     def __init__(self):
