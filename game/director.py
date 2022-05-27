@@ -25,7 +25,7 @@ class Director:
         display_jumper_image.player_guess(1)
         #print(f"Welcome to JUMPER, {Players_Name} ")
         dictionary_word_list = read_Jumper_words.read_Jumper_words(
-            "week3\Jumper\CSE210-03\jumper.csv", 0)
+            "jumper.csv", 0)
         # print(dictionary_word_list)
         self.random_word_nc = get_random_word.get_random_word(
             dictionary_word_list)
