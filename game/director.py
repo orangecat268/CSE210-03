@@ -16,11 +16,8 @@ class Director:
 
     def start_game(self):
         # display_jumper_image.player_guess(1)
-        dictionary_word_list = read_Jumper_words.read_Jumper_words(
-            "jumper.csv", 0)
-        self.random_word_nc = get_random_word.get_random_word(
-            dictionary_word_list)
+        dictionary_word_list = read_Jumper_words.read_Jumper_words("jumper.csv", 0)
+        self.random_word_nc = get_random_word.get_random_word(dictionary_word_list)
         self.random_word = self.random_word_nc.upper()
         self.jumper_word = ["#" for i in range(len(self.random_word))]
-        new_record_guesses = play_Jumper_Game.play_Jumper_Game(
-            self.random_word, 0, 0, "", self.jumper_word, 0, 5, "", "")
+        new_record_guesses = play_Jumper_Game.play_Jumper_Game(self.random_word, 0, 0, "", self.jumper_word, 0, 5, "", "")
