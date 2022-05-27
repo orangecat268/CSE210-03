@@ -1,4 +1,3 @@
-
 class display_jumper_image:
 
     def __init__(self):
@@ -76,7 +75,6 @@ class display_jumper_image:
             print("^^^^^^^")
 
     def play_screen_update(random_word, incorrect_guesses, hidden_word, eval_guess=0, LIMIT=5, game_status="2", last_tried=""):
-        # clear_screen()
 
         print()
         print("   __  _  _  _  _  ____  ____  ____ ")
@@ -88,19 +86,14 @@ class display_jumper_image:
         display_jumper_image.player_guess(len(incorrect_guesses))
 
         if game_status == 0:
-            print()
-            print(f"Game over!!! your word was : {random_word} ")
-            print()
-            print(f"Your incorrect guesses were : {incorrect_guesses}")
+            print(f"Game over!!! your word was : {random_word} \n")
+            print(f"Your incorrect guesses were : {incorrect_guesses} \n")
         elif game_status == 1:
-            print()
             print(f"WOOOOOHOOOOOOOO")
-            print(f"YOU WIN!, You correctly guessed: {random_word}")
-            print()
-            print(f"Your incorrect guesses were : {incorrect_guesses}")
+            print(f"YOU WIN!, You correctly guessed: {random_word} \n")
+            print(f"Your incorrect guesses were : {incorrect_guesses} \n")
         else:
-            print()
-            print(f"Your hidden word looks like this : {hidden_word}")
+            print(f"\n Your hidden word looks like this : {hidden_word}")
             if len(incorrect_guesses) > 0:
                 print(
                     f"You have made the following guess '{incorrect_guesses}' which is incorrect .")
@@ -110,8 +103,5 @@ class display_jumper_image:
 
             guesses_left = 0
             guesses_left = 5 - int(len(incorrect_guesses))
-            # guesses_left_str = str(guesses_left)
             print(f"You have {guesses_left} incorrect guesses left.")
-            # print(f"Length: {len(hidden_word)} last letter tried: {last_tried}")
             print()
-            # return guesses_left

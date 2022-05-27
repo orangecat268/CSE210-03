@@ -1,8 +1,6 @@
 import csv
 
-
 class read_Jumper_words:
-
     def read_Jumper_words(filename, key_index_num):
         dictionary = {}
         try:

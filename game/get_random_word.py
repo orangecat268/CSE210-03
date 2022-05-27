@@ -1,4 +1,3 @@
-
 import random
 
 
@@ -8,10 +7,4 @@ class get_random_word():
 
         random_line = random.choice(list(dictionary_word_list.values()))
         random_word = random_line[0]
-        #name_top_score = random_line[top_name_id]
-        #fastest_time = random_line[top_score_id]
         return random_word
-        # return random_word, fastest_time, name_top_score
-        # print(name_top_score)
-        # print(fastest_time)
-        # print(random_word)

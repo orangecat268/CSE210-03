@@ -1,9 +1,7 @@
 
 from game.display_jumper_image import display_jumper_image
 
-
 class play_Jumper_Game:
-
     def __init__(self):
         incorrect_guesses = []
         check_guess = True
@@ -11,8 +9,6 @@ class play_Jumper_Game:
     def play_Jumper_Game(random_word, fastest_time, name_top_score, incorrect_guesses, jumper_word, eval_guess=0, num_chances=5, game_status="2", last_tried=""):
         incorrect_guesses = []
         check_guess = True
-        #incorrect_guesses = []
-        #check_guess = True
         while check_guess:
             print(random_word)
             if len(incorrect_guesses) == num_chances:
@@ -23,9 +19,6 @@ class play_Jumper_Game:
                 display_jumper_image.play_screen_update(
                     random_word, incorrect_guesses, jumper_word, game_status=1)
                 return len(incorrect_guesses)
-                # if incorrect_guesses < fastest_time:
-                #    update_high_score(random_word, incorrect_guesses, name_top_score)
-                # Need to updated winner
             display_jumper_image.play_screen_update(random_word, incorrect_guesses, jumper_word,
                                                     eval_guess, num_chances, game_status, last_tried)
             letter_guess = input(
