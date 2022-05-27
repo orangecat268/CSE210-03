@@ -3,20 +3,10 @@ class display_jumper_image:
     # Displays each image of jumper starting from
     # no misses to run out of turns
 
+    print("")
+    
     def player_guess(guess=1):
-        if guess == 1:
-            print("_ _ _ _ _")
-            print(" ")
-            print("  ___")
-            print(" /___\\")
-            print(" \   / ")
-            print("  \ / ")
-            print("   O   ")
-            print("  /|\\ ")
-            print("  / \ ")
-            print(" ")
-            print("^^^^^^^")
-        elif guess == 2:
+        if guess == 2:
             print("_ _ _ _ _")
             print(" ")
             print(" /___\\")
@@ -58,8 +48,19 @@ class display_jumper_image:
             print(" ")
             print("^^^^^^^")
         else:
-            print("")
+            print("_ _ _ _ _")
+            print(" ")
+            print("  ___")
+            print(" /___\\")
+            print(" \   / ")
+            print("  \ / ")
+            print("   O   ")
+            print("  /|\\ ")
+            print("  / \ ")
+            print(" ")
+            print("^^^^^^^")
 
+        
     def play_screen_update(random_word, incorrect_guesses, hidden_word, eval_guess=0, LIMIT=5, game_status="2", last_tried=""):
         display_jumper_image.player_guess(len(incorrect_guesses))
 
