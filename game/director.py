@@ -15,7 +15,8 @@ class Director:
         jumper_word = ""
 
     def start_game(self):
-        # display_jumper_image.player_guess(1)
+        print("Welcome to Jumper Game")
+        input("Press enter to start...")
         dictionary_word_list = read_Jumper_words.read_Jumper_words("jumper.csv", 0)
         self.random_word_nc = get_random_word.get_random_word(dictionary_word_list)
         self.random_word = self.random_word_nc.upper()
