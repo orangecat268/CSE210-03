@@ -1,9 +1,5 @@
 class display_jumper_image:
 
-    def __init__(self):
-
-        self.guess = 1
-
     # Displays each image of jumper starting from
     # no misses to run out of turns
 
@@ -86,22 +82,21 @@ class display_jumper_image:
         display_jumper_image.player_guess(len(incorrect_guesses))
 
         if game_status == 0:
-            print(f"Game over!!! your word was : {random_word} \n")
-            print(f"Your incorrect guesses were : {incorrect_guesses} \n")
+            print(f"Game Over - the word was: {random_word} \n")
+            print(f"Incorrect guesses: {incorrect_guesses} \n")
         elif game_status == 1:
             print(f"WOOOOOHOOOOOOOO")
-            print(f"YOU WIN!, You correctly guessed: {random_word} \n")
-            print(f"Your incorrect guesses were : {incorrect_guesses} \n")
+            print(f"YOU WIN - the word was: {random_word} \n")
+            print(f"Incorrect guesses: {incorrect_guesses} \n")
         else:
-            print(f"\n Your hidden word looks like this : {hidden_word}")
+            print(f"\nYour hidden word looks like this: {hidden_word}")
             if len(incorrect_guesses) > 0:
                 print(
-                    f"You have made the following guess '{incorrect_guesses}' which is incorrect .")
+                    f"Incorrect guesses: '{incorrect_guesses}'")
             elif len(incorrect_guesses) > 1:
                 print(
-                    f"You have made the following guesses '{incorrect_guesses}' which are incorrect .")
+                    f"Incorrect guesses: '{incorrect_guesses}'")
 
             guesses_left = 0
             guesses_left = 5 - int(len(incorrect_guesses))
-            print(f"You have {guesses_left} incorrect guesses left.")
-            print()
+            print(f"{guesses_left} remaining guesses \n")
